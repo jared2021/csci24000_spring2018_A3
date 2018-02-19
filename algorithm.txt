@@ -1,0 +1,4 @@
+In our header file I will build the basic player object with a constructor which will have a method to hold the chances the shot will go into the basket and the character array that will hold the word horse
+It will also have a deconstructor that will delete the two previously mentioned variables
+The Player.cpp file will give meaning to the player object and the player method for the shot percentage
+The Game.cpp file will build the game simulation for horse through importing the header file
