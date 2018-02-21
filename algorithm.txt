@@ -1,4 +1,11 @@
-In our header file I will build the basic player object with a constructor which will have a method to hold the chances the shot will go into the basket and the character array that will hold the word horse
-It will also have a deconstructor that will delete the two previously mentioned variables
-The Player.cpp file will give meaning to the player object and the player method for the shot percentage
-The Game.cpp file will build the game simulation for horse through importing the header file
+the goal of this assignment is to make a simulator for a game of horse
+the program is supposed to make use of objects to create two different "players" both with different methods to be used to play the game
+the user will not have to input anything
+the output should consist of who takes a shot whether they make or miss the shot and whether a player adds a letter to their score
+the idea is that a random number generater will determine whether they make or miss the shot 1 for make 2 for miss
+then depending on what each player got that round it will either give them the same score as they had before or will increase the letters they have by one
+the program will run recursively until one player has the word horse
+then once it is over the program will ask if the user would like to play again
+if they enter "Y" then the program will run again
+if they enter "N" then the program will end
+if they do not enter either of these things the program will tell them it doesn't know what it wants it to do and will continue to ask them until they either enter "Y" or "N"
