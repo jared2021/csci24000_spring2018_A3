@@ -12,11 +12,16 @@ class Player
 	public:
 		Player();
 		~Player();
-		char Horse[5];
+		int setScore();
 		int setShot();
 		int getShot();
 	
 	private:
+		char Horse[5];
 		int shot;
+		int one;
+		int two;
+		int letter1;
+		int letter2;
 };
 #endif
