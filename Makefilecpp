@@ -1,0 +1,12 @@
+all:Driver
+Driver:Player.o Game.cpp
+	g++ Player.o Game.cpp -o driver
+Player.o:
+	g++ -c Player.cpp Player.h
+clean:
+	rm Player.o
+	rm Driver
+run:
+	./Gamecpp
+val:
+	valgrind --leak-check=full --log-file=valgrind.txt .driver	
