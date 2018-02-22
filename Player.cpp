@@ -9,7 +9,7 @@
 #include <iostream>
 Player::Player()
 {
-			
+
 }
 Player::~Player()
 {
@@ -23,9 +23,9 @@ int Player::getShot()
 {
 	return this->shot;	
 }
-int Player::setScore()
+char Player::test()
 {
-	if(this->one==2&&this->two==1)
+	/*if(this->one==2&&this->two==1)
 	{
 		this->letter1=this->letter1++;
 		if (this->letter1==1)
@@ -72,6 +72,6 @@ int Player::setScore()
 		{
 			this->Horse[4]='E';
 		}
-	}
+	}*/
 }
 
