@@ -11,7 +11,7 @@ class Player
 {
 	public:
 		Player();
-		int setShot();
+		void setShot();
 		void getScore();
 		bool getShot();
 		char* getHorse();
