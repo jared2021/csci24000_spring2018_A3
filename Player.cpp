@@ -17,7 +17,7 @@ Player::~Player()
 {
 	delete [] Horse;
 }
-int Player::setShot()
+void Player::setShot()
 {
 	this->shot=rand()%2+1;
 	if (this->shot==1)
