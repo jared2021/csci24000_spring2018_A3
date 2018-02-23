@@ -9,69 +9,68 @@
 #include <iostream>
 Player::Player()
 {
-
+	letter1=0;
+	letter2=0;
+	Horse= new char[5];
 }
 Player::~Player()
 {
-
+	delete [] Horse;
 }
 int Player::setShot()
 {
 	this->shot=rand()%2+1;
-}
-int Player::getShot()
-{
-	return this->shot;	
-}
-char Player::test()
-{
-	/*if(this->one==2&&this->two==1)
+	if (this->shot==1)
 	{
-		this->letter1=this->letter1++;
-		if (this->letter1==1)
-		{
-			this->Horse[0]='H';
-		}
-		else if(this->letter1==2)
-		{
-			this->Horse[1]='O';
-		}
-		else if (this->letter1==3)
-		{
-			this->Horse[2]='R';
-		}
-		else if (this->letter1==4)
-		{
-			this->Horse[3]='S';
-		}
-		else if (this->letter1==5)
-		{
-			this->Horse[4]='E'
-		}
+		this->score=true;	
 	}
-	else if (this->one==1&&this->two==2)
+	else if(this->shot==2)
 	{
-		this->letter2=this->letter2++;
-		if (this->letter2==1)
-		{
-			this->Horse[0]='H';
-		}
-		else if (this->letter2==2)
-		{
-			this->Horse[1]='O';
-		}
-		else if (this->letter2==3)
-		{
-			this->Horse[2]='R';
-		}
-		else if (this->letter2==4)
-		{
-			this->Horse[3]='S';
-		}
-		else if (this->letter2==5)
-		{
-			this->Horse[4]='E';
-		}
-	}*/
+		this->score=false;
+	}
+}
+bool Player::getShot()
+{
+	return this->score;
+	//if shot equals one make it true
+	//if shot equals two make it false
+	//if(this->shot==1){
+	//	bool variable=True;
+	//}
+	//if(this->shot==2){
+	//	bool variable=False;
+	//}
+}
+void Player::getScore()
+{
+	//pass the values of shot to one and two 
+	//and use that to determine what they get
+	//if one is true and two is false
+	//Player two gets an H unless he already has it then he gets a O and so on and so forth
+	//if(bool variable==False)
+	if(this->Horse[0]!='H')
+	{
+		this->Horse[0]='H';
+	}
+	else if(this->Horse[1]!='O')
+	{
+		this->Horse[1]='O';
+	}
+	else if(this->Horse[2]!='R')
+	{
+		this->Horse[2]='R';
+	}
+	else if (this->Horse[3]!='S')
+	{
+		this->Horse[3]='S';
+	}
+	else if (this->Horse[4]!='E')
+	{
+		this->Horse[4]='E';
+	}
+}		
+char* Player::getHorse()
+{
+	return Horse;
 }
 

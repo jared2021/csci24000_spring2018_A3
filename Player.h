@@ -12,16 +12,22 @@ class Player
 	public:
 		Player();
 		int setShot();
-		char test();
-		int getShot();
+		void getScore();
+		bool getShot();
+		int getOne();
+		int getTwo();
+		int getLetter1();
+		int getLetter2();
+		char* getHorse();
 		~Player();
 	
 	private:
-		char Horse[5];
+		char* Horse;
+		bool score;
 		int shot;
 		int one;
 		int two;
-		int letter1=0;
-		int letter2=0;
+		int letter1;
+		int letter2;
 };
 #endif
