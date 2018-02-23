@@ -9,9 +9,9 @@
 #include <iostream>
 Player::Player()
 {
-	letter1=0;
-	letter2=0;
 	Horse= new char[5];
+	this->shot = 0;
+	this->score = false;
 }
 Player::~Player()
 {
