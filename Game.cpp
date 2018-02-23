@@ -9,15 +9,17 @@
 #include <stdlib.h>
 int main()
 {
-	int letter1=0;
-	int letter2=0;
 	bool one;
 	bool two;
 	srand(time(NULL));
-	char game[1]={'Y'};
-	while (game[0]=='Y'){
+	char game='Y';
+	while (game=='Y'){
+		int letter1=0;
+		int letter2=0;
 		Player* myPlayerone=new Player();
 		Player* myPlayertwo=new Player();
+		std::cout<<(*myPlayertwo).getHorse()<<'\n';
+		std::cout<<(*myPlayerone).getHorse()<<'\n';
 		while (letter1<5&&letter2<5){
 			std::cout<<"Player One goes to shoot."<<'\n';
 			(*myPlayerone).setShot();
@@ -43,31 +45,32 @@ int main()
 			 {
 				(*myPlayertwo).getScore();
 				letter2=letter2+1;
+				std::cout<<"Player Two has "<<(*myPlayertwo).getHorse()<<'\n';
 			 }
 			 else if (one==false&&two==true)
 			 {
 				 (*myPlayerone).getScore();
 				 letter1=letter1+1;
+				 std::cout<<"Player One has "<<(*myPlayerone).getHorse()<<'\n';
 			 }
 			
 			if (letter1==5){
-				std::cout<<"Player Two has won! Player One has (*myPlayerone).getHorse"<<(*myPlayerone).getHorse()<<'\n';
+				std::cout<<"Player Two has won! Player One has "<<(*myPlayerone).getHorse()<<'\n';
 			}
 			else if (letter2==5){
-				std::cout<<"Player One has won! Player Two has (*myPlayertwo).getHorse"<<(*myPlayertwo).getHorse()<<'\n';
+				std::cout<<"Player One has won! Player Two has "<<(*myPlayertwo).getHorse()<<'\n';
 			}
 		delete myPlayerone;
 		delete myPlayertwo;
 		}
-			std::cout<<"Would you like to play again? [Y|N]";
-			std::cin>>game[0];
-			if (game[0]!='Y'||game[0]!='N'){
-				std::cout<<"I'm not sure what you want me to do.";
-				std::cout<<"Would you like to play again? [Y|N]";
-			}
-			else if (game[0]='N'){
-				return 0;	
-			}
+			std::cout<<"Would you like to play again? [Y|N]"<<'\n';
+			std::cin>>game;
+			while (game!='Y'&&game!='N'){
+				std::cout<<"I'm not sure what you want me to do."<<'\n';
+				std::cout<<"Would you like to play again? [Y|N]"<<'\n';
+				std::cin>>game;
 			}
 		}
+	return 0;
+}
 	
