@@ -18,8 +18,6 @@ int main()
 		int letter2=0;
 		Player* myPlayerone=new Player();
 		Player* myPlayertwo=new Player();
-		std::cout<<(*myPlayertwo).getHorse()<<'\n';
-		std::cout<<(*myPlayerone).getHorse()<<'\n';
 		while (letter1<5&&letter2<5){
 			std::cout<<"Player One goes to shoot."<<'\n';
 			(*myPlayerone).setShot();
