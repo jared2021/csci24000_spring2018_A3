@@ -10,12 +10,16 @@
 #include <stdlib.h>
 int main()
 {
+	//one and two variables used to store whether or not player one and player two made the shot or not
 	bool one;
 	bool two;
+	//below line to make sure that my random part of my setShot method chooses a new number each time it is called
 	srand(time(NULL));
+	//game array used to continue to run the program if the user types in a Y at the end of the program
 	char* game= new char[1];
 	game[0] = 'Y';
 	while (game[0]=='Y'){
+		//letter1 and letter2 variables used to end the program when player one or player two has 5 letters
 		int letter1=0;
 		int letter2=0;
 		Player* myPlayerone=new Player();

@@ -14,6 +14,6 @@ clean:
 	rm Player.o
 	rm Driver
 run:
-	./Gamecpp
+	./Horsecpp
 val:
 	valgrind --leak-check=full --log-file=valgrind.txt .driver	

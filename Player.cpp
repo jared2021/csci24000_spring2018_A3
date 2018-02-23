@@ -9,6 +9,7 @@
 #include <iostream>
 Player::Player()
 {
+	//initializes the variables and giving them starting values
 	Horse= new char[5];
 	this->shot = 0;
 	this->score = false;
@@ -19,6 +20,7 @@ Player::~Player()
 }
 void Player::setShot()
 {
+	//gives a random number to determine whether they made or missed the shot
 	this->shot=rand()%2+1;
 	if (this->shot==1)
 	{
@@ -31,23 +33,12 @@ void Player::setShot()
 }
 bool Player::getShot()
 {
+	//returns score so I can give that value to a variable in my main function
 	return this->score;
-	//if shot equals one make it true
-	//if shot equals two make it false
-	//if(this->shot==1){
-	//	bool variable=True;
-	//}
-	//if(this->shot==2){
-	//	bool variable=False;
-	//}
 }
 void Player::getScore()
 {
-	//pass the values of shot to one and two 
-	//and use that to determine what they get
-	//if one is true and two is false
-	//Player two gets an H unless he already has it then he gets a O and so on and so forth
-	//if(bool variable==False)
+	//gives the player a letter when they miss and the other player hits the shot
 	if(this->Horse[0]!='H')
 	{
 		this->Horse[0]='H';
@@ -71,6 +62,7 @@ void Player::getScore()
 }		
 char* Player::getHorse()
 {
+	//returns the array Horse so I can print it when needed
 	return Horse;
 }
 
